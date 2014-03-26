@@ -1,0 +1,41 @@
+{
+  "name": "jquery-vertical-timeline",
+  "version": "0.3.0",
+  "homepage": "https://github.com/MinnPost/jquery-vertical-timeline",
+  "authors": [
+    "Alan Palazzolo <apalazzolo@minnpost.com>"
+  ],
+  "description": "A vertical timeline using jQuery and Isotope.",
+  "main": "dist/jquery-vertical-timeline.min.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "tabletop": "https://github.com/zzolo/tabletop.git#timeline-fixes",
+    "jquery": "~1.10",
+    "imagesloaded": "~3.1.0",
+    "isotope": "https://github.com/desandro/isotope.git#~1.5.25",
+    "underscore": "~1.5.2",
+    "momentjs": "~2.5.1"
+  },
+  "devDependencies": {
+    "normalize-css": "~2.1.3",
+    "jquery-resize": "https://github.com/cowboy/jquery-resize.git",
+    "requirejs": "~2.1.10"
+  },
+  "_release": "0.3.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.3.0",
+    "commit": "9ec78c9435f85978fe8a29a93d94d98531c1dac8"
+  },
+  "_source": "git://github.com/MinnPost/jquery-vertical-timeline.git",
+  "_target": "~0.3.0",
+  "_originalSource": "jquery-vertical-timeline",
+  "_direct": true
+}
