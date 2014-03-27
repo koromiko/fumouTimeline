@@ -348,9 +348,38 @@ module.exports = function (grunt) {
                 'imagemin',
                 'svgmin'
             ]
+        },
+
+        buildcontrol: {
+            options: {
+                dir: 'dist',
+                commit: true,
+                push: true,
+                message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+            },
+            heroku: {
+                options: {
+                    remote: 'git@github.com:koromiko/fumouTimeline.git',
+                    branch: 'master'
+                }
+
+            },
+            pages: {
+                options: {
+                    remote: 'git@github.com:koromiko/fumouTimeline.git',
+                    branch: 'gh-pages'
+                }
+            }
         }
+
+
+
     });
 
+    
+
+    grunt.loadNpmTasks('grunt-build-control');
+    
 
     grunt.registerTask('serve', function (target) {
         if (target === 'dist') {
