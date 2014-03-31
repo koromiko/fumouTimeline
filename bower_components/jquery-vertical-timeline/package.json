@@ -1,0 +1,30 @@
+{
+  "name": "jquery-vertical-timeline",
+  "version": "0.3.0",
+  "homepage": "https://github.com/MinnPost/jquery-vertical-timeline",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minnpost/jquery-vertical-timeline"
+  },
+  "bugs": "https://github.com/minnpost/jquery-vertical-timeline/issues",
+  "license": "MIT",
+  "author": {
+    "name": "MinnPost",
+    "email": "data@minnpost.com"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-uglify": "~0.3.1",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-connect": "~0.6.0",
+    "grunt-contrib-requirejs": "~0.4.0",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-compass": "~0.7.0",
+    "grunt-text-replace": "~0.3.10"
+  }
+}
