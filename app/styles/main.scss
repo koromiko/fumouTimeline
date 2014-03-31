@@ -67,17 +67,53 @@ body {
 
 .item { 
     width: 45%; 
-    background-color: #CCC;
+    background-color: #BDA792;
     margin: 5px;
-    padding: 10px;
+    padding: 15px;
     h2{
         color: white;
     }
+    h3{
+        color: white;
+    }
+    p{
+        color: #3E372C;
+        float: left;
+    }
+    small{
+        color: white;
+        float:right;
+    }
+    a{
+        float:left;
+    }
+
+
+
+
 }
 .item.w2 { 
     width: 100%; 
     background-color: #CCC; 
     padding: 10px;
+
+}
+
+
+
+.main-timeline{
+
+    height: 100%;
+    border-left: 5px solid #A48E7A; 
+    .label{
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        width: 50%;
+        color: black;
+        border-bottom: 2px solid;
+        background-color: white; 
+    }
 
 }
 
