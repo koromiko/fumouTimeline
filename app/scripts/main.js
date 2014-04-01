@@ -3,10 +3,12 @@ console.log('\'Allo \'Allo!');
 
 var globalSpreadSheet = "https://docs.google.com/spreadsheet/pub?key=0Avv7Q0VS0N-wdFFudFhCNEQ4Wmo1WW1VbGxaZXhRNGc&output=html";
 var monthsArray = "一月,二月,三月,四月,五月,六月,七月,八月,九月,十月,十一月,十二月".split(",");
+var monthsEngArray = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec".split(",");
 
 $(document).ready(function() {
 
 	
+
 	window.onload = function() { init() };
 
 	var public_spreadsheet_url = globalSpreadSheet;
@@ -22,7 +24,7 @@ $(document).ready(function() {
 	                 		 var eventDate = toDate(val.date);
 	                 		 var yearLabel = eventDate.getFullYear() + "." + monthsArray[ eventDate.getMonth() ];
 	                 		 var itemID = eventDate.getFullYear() + "-" + eventDate.getMonth();
-	                 		 var detailTime = eventDate.getFullYear() + "." + (eventDate.getMonth()+1) + "." + (eventDate.getDay()+1);
+	                 		 var detailTime =  monthsEngArray[eventDate.getMonth()] + "." + (eventDate.getDay()+1);
 	                 		 val.timeLabel = yearLabel;
 	                 		 val.detailTime = detailTime;
 	                 		 if(dic[itemID]==null){
@@ -62,12 +64,22 @@ function renderWaterfallView( data ){
 
 		$.each( data['newsData'] , function(key, val) {
 			 /* iterate through array or object */
-			var $container = $('#waterfall-container-'+key);
+			var $container2 = $('#waterfall-container-'+key);
 			
-			$container.masonry({
-				itemSelector: '.item'
+			
+
+			$container2.imagesLoaded( function(){
+			  $container2.masonry({
+			    itemSelector : '.item'
+			  });
 			});	
+			
+			
+
+
 		});
+
+		var s = skrollr.init();
 		
 	} );
 
