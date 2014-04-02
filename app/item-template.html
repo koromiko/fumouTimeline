@@ -18,21 +18,26 @@
                     <div class="dateLabel">{{detailTime}}</div>
                     <div class="title-background"></div>
                     <h3>{{title}}</h3>
-                    
                     <p>{{body}}<br><a href="{{readmoreurl}}" target="_blank" >新聞連結</a></p>
-                    <!-- {{#if readmoreurl}}
-                    <a class="btn btn-default btn-block" href="{{readmoreurl}}" target="_blank" >新聞連結</a>
-                    {{/if}} -->
-                </div>
-            {{else}}
-                <div class="item">
-                    <small>{{detailTime}}</small>
-                    <h3>{{title}}</h3>
-
-                    <p>{{body}}</p>
                     {{#if readmoreurl}}
                     <a class="btn btn-default btn-block" href="{{readmoreurl}}" target="_blank" >新聞連結</a>
                     {{/if}}
+                </div>
+            {{else}}
+                <div class="item">
+                    <a href="{{readmoreurl}}" target="_blank">
+                        <div class="newstag-wrap">
+                            <div class="newstag-text">
+                                <span class="newssrc">{{newssrc}}</span>
+                                <span class="date">{{detailTime}}</span>
+                            </div>
+                            <div class="newstag-tri"></div>
+                        </div>
+                    </a>
+                    <h3>{{title}}</h3>
+                    <p>{{body}}</p>
+
+
                 </div>
             {{/if}}
         
