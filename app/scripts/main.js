@@ -5,9 +5,9 @@ var globalSpreadSheet = "https://docs.google.com/spreadsheet/pub?key=0Avv7Q0VS0N
 var monthsArray = "一月,二月,三月,四月,五月,六月,七月,八月,九月,十月,十一月,十二月".split(",");
 var monthsEngArray = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec".split(",");
 
-$(document).ready(function() {
+var source = ['中央社', '蘋果日報']
 
-	
+$(document).ready(function() {
 
 	window.onload = function() { init() };
 
@@ -19,6 +19,7 @@ $(document).ready(function() {
 	                 	
 	                 	// renderWaterfallView( { "newsData":data } );
 	                 	var dic = {};
+
 	                 	$.each( data.reverse() , function(index, val) {
 	                 		 /* iterate through array or object */
 	                 		 var eventDate = toDate(val.date);
@@ -27,6 +28,16 @@ $(document).ready(function() {
 	                 		 var detailTime =  monthsEngArray[eventDate.getMonth()] + "." + (eventDate.getDay()+1);
 	                 		 val.timeLabel = yearLabel;
 	                 		 val.detailTime = detailTime;
+
+
+	                 		 
+	                 		 val.newssrc = source[index%2]
+	                 		 
+	                 		 // push an empty url
+	                 		 if(val.readmoreurl == null || val.readmoreurl == '') {
+	                 		 	val.readmoreurl = '';
+	                 		 }
+
 	                 		 if(dic[itemID]==null){
 								dic[ itemID ] = [ val ];
 	                 		 }else{

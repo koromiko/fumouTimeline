@@ -87,6 +87,7 @@ body {
         background: black;
         padding: 10px;
         font-size: 18px;
+        letter-spacing: 0.5px;
     }
 
 }
@@ -100,19 +101,25 @@ body {
 }
 
 .item { 
-    width: 45%; 
+    width: 40%; 
     background-color: black;
-    margin: 5px;
+    margin: 15px;
     padding: 15px;
+
     h2{
         color: white;
     }
     h3{
         color: white;
+        margin-top: 30px;
     }
     p{
-        color: white;
+        color: #f3f3f3; /* highlight the header, reduce the body text */
         float: left;
+        padding-top: 3px; /* away from the header */
+        line-height: 22px;
+        font-size: 15px;
+
     }
     small{
         color: white;
@@ -125,6 +132,31 @@ body {
     }
 
     @include border-radius(2px, 2px);
+
+    div.newstag-wrap {
+        position: absolute;
+        top: 10px;
+        left: -11px;
+        color: white;
+        .newstag-text {
+            background: red;
+            padding: 3px 5px;
+            color: #f5f5f5;
+            .date {
+                font-size: 0.9em;
+            }
+            z-index: 2;
+        }
+        .newstag-tri {
+            width: 0px;
+            height: 0px;
+         
+            border-left: 11px solid transparent;
+            border-top: 8px solid #8C0000;
+         
+            z-index: 1;            
+        }
+    }
 
 
 }
