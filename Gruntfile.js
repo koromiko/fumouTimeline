@@ -303,7 +303,7 @@ module.exports = function (grunt) {
                     src: [
                         '*.{ico,png,txt}',
                         '.htaccess',
-                        'images/{,*/}*.webp',
+                        'images/{,*/}*',
                         '{,*/}*.html',
                         'styles/fonts/{,*/}*.*',
                         'bower_components/' + (this.includeCompass ? 'sass-' : '') + 'bootstrap/' + (this.includeCompass ? 'fonts/' : 'dist/fonts/') +'*.*'
@@ -345,7 +345,7 @@ module.exports = function (grunt) {
             dist: [
                 'compass',
                 'copy:styles',
-                'imagemin',
+                // 'imagemin',
                 'svgmin'
             ]
         },
