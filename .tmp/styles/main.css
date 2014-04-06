@@ -19997,9 +19997,7 @@ body {
   }
 }
 
-.cover-image {
-  background: url("https://farm3.staticflickr.com/2876/13572051625_611697b51d_o.jpg") no-repeat;
-  background-size: 100% auto;
+#cover-image {
   display: block;
   text-align: center;
   color: white;
@@ -20008,7 +20006,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: -5;
+  z-index: 0;
   padding-top: 20%;
 }
 
@@ -20022,10 +20020,116 @@ body {
   }
 }
 
-.cover-image span {
+#cover-image span {
   background: black;
-  padding: 10px;
-  font-size: 18px;
+  padding: 1em;
+  margin: 0.4em;
+  letter-spacing: 0.5px;
+  z-index: 10;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/neo\/Documents\/Project\/fumouTimeline\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003104;
+  }
+}
+
+#cover-image a {
+  margin: 0.4em;
+  padding: 1em;
+  cursor: pointer;
+  background: none repeat scroll 0% 0% #000;
+  text-decoration: none;
+  color: #FFF;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/neo\/Documents\/Project\/fumouTimeline\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003112;
+  }
+}
+
+#cover-image .trim:hover:before {
+  opacity: 1;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/neo\/Documents\/Project\/fumouTimeline\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003115;
+  }
+}
+
+#cover-image .trim:before {
+  content: "";
+  position: absolute;
+  border: 4px solid #FFF;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  opacity: 0;
+  transition-duration: 0.3s;
+  transition-property: opacity;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/neo\/Documents\/Project\/fumouTimeline\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003128;
+  }
+}
+
+#cover-image .trim {
+  display: inline-block;
+  position: relative;
+  -webkit-transform: translateZ(0px);
+  transform: translateZ(0px);
+  box-shadow: 0px 0px 1px transparent;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/neo\/Documents\/Project\/fumouTimeline\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003138;
+  }
+}
+
+.cover-fumou {
+  background: url("https://farm3.staticflickr.com/2876/13572051625_611697b51d_o.jpg") no-repeat;
+  background-size: 100% auto;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/neo\/Documents\/Project\/fumouTimeline\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003143;
+  }
+}
+
+.cover-sunflower {
+  background: url("https://farm8.staticflickr.com/7415/13582094264_5cd9d9b1a8_b.jpg") no-repeat;
+  background-size: 100% auto;
 }
 
 /* Supporting marketing content */
@@ -20036,7 +20140,7 @@ body {
   }
 
   line {
-    font-family: \0000395;
+    font-family: \00003152;
   }
 }
 
@@ -20050,7 +20154,7 @@ body {
   }
 
   line {
-    font-family: \0000397;
+    font-family: \00003154;
   }
 }
 
@@ -20064,14 +20168,14 @@ body {
   }
 
   line {
-    font-family: \00003102;
+    font-family: \00003159;
   }
 }
 
 .item {
-  width: 45%;
+  width: 40%;
   background-color: black;
-  margin: 5px;
+  margin: 15px;
   padding: 15px;
   border-radius: 2px / 2px;
 }
@@ -20082,7 +20186,7 @@ body {
   }
 
   line {
-    font-family: \00003107;
+    font-family: \00003165;
   }
 }
 
@@ -20096,12 +20200,13 @@ body {
   }
 
   line {
-    font-family: \00003110;
+    font-family: \00003168;
   }
 }
 
 .item h3 {
   color: white;
+  margin-top: 30px;
 }
 
 @media -sass-debug-info {
@@ -20110,13 +20215,18 @@ body {
   }
 
   line {
-    font-family: \00003113;
+    font-family: \00003172;
   }
 }
 
 .item p {
-  color: white;
+  color: #f3f3f3;
+  /* highlight the header, reduce the body text */
   float: left;
+  padding-top: 3px;
+  /* away from the header */
+  line-height: 22px;
+  font-size: 15px;
 }
 
 @media -sass-debug-info {
@@ -20125,7 +20235,7 @@ body {
   }
 
   line {
-    font-family: \00003117;
+    font-family: \00003180;
   }
 }
 
@@ -20140,7 +20250,7 @@ body {
   }
 
   line {
-    font-family: \00003121;
+    font-family: \00003184;
   }
 }
 
@@ -20156,7 +20266,73 @@ body {
   }
 
   line {
-    font-family: \00003131;
+    font-family: \00003192;
+  }
+}
+
+.item div.newstag-wrap {
+  position: absolute;
+  top: 10px;
+  left: -11px;
+  color: white;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/neo\/Documents\/Project\/fumouTimeline\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003197;
+  }
+}
+
+.item div.newstag-wrap .newstag-text {
+  background: red;
+  padding: 3px 5px;
+  color: #f5f5f5;
+  z-index: 2;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/neo\/Documents\/Project\/fumouTimeline\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003201;
+  }
+}
+
+.item div.newstag-wrap .newstag-text .date {
+  font-size: 0.9em;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/neo\/Documents\/Project\/fumouTimeline\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003206;
+  }
+}
+
+.item div.newstag-wrap .newstag-tri {
+  width: 0px;
+  height: 0px;
+  border-left: 11px solid transparent;
+  border-top: 8px solid #8C0000;
+  z-index: 1;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/neo\/Documents\/Project\/fumouTimeline\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003219;
   }
 }
 
@@ -20173,7 +20349,7 @@ body {
   }
 
   line {
-    font-family: \00003136;
+    font-family: \00003224;
   }
 }
 
@@ -20187,7 +20363,7 @@ body {
   }
 
   line {
-    font-family: \00003139;
+    font-family: \00003227;
   }
 }
 
@@ -20206,7 +20382,7 @@ body {
   }
 
   line {
-    font-family: \00003148;
+    font-family: \00003236;
   }
 }
 
@@ -20221,7 +20397,7 @@ body {
   }
 
   line {
-    font-family: \00003152;
+    font-family: \00003240;
   }
 }
 
@@ -20236,7 +20412,7 @@ body {
   }
 
   line {
-    font-family: \00003159;
+    font-family: \00003247;
   }
 }
 
@@ -20255,7 +20431,7 @@ body {
   }
 
   line {
-    font-family: \00003169;
+    font-family: \00003257;
   }
 }
 
@@ -20274,7 +20450,7 @@ body {
   }
 
   line {
-    font-family: \00003182;
+    font-family: \00003270;
   }
 }
 
@@ -20292,7 +20468,59 @@ body {
   }
 
   line {
-    font-family: \00003195;
+    font-family: \00003283;
+  }
+}
+
+#loading-indicator {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  float: left;
+  -webkit-animation-name: rotateThis;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/neo\/Documents\/Project\/fumouTimeline\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003295;
+  }
+}
+
+#loading-indicator div {
+  background: #FFF;
+  width: 10px;
+  height: 30px;
+  position: absolute;
+  top: 35px;
+  left: 45px;
+}
+
+@-webkit-keyframes rotateThis {
+  /* line 306, ../../app/styles/main.scss */
+  from {
+    -webkit-transform: scale(0.5) rotate(0deg);
+  }
+
+  /* line 307, ../../app/styles/main.scss */
+  to {
+    -webkit-transform: scale(0.5) rotate(360deg);
+  }
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/neo\/Documents\/Project\/fumouTimeline\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003311;
   }
 }
 
@@ -20314,7 +20542,22 @@ body {
   }
 
   line {
-    font-family: \00003216;
+    font-family: \00003324;
+  }
+}
+
+.scroll-indicator {
+  text-align: center;
+  color: #FFF;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/neo\/Documents\/Project\/fumouTimeline\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003340;
   }
 }
 
@@ -20330,7 +20573,7 @@ body {
   }
 
   line {
-    font-family: \00003224;
+    font-family: \00003348;
   }
 }
 
@@ -20344,7 +20587,7 @@ body {
   }
 
   line {
-    font-family: \00003228;
+    font-family: \00003352;
   }
 }
 
@@ -20362,7 +20605,7 @@ body {
     }
 
     line {
-      font-family: \00003235;
+      font-family: \00003359;
     }
 }
 
@@ -20378,7 +20621,7 @@ body {
     }
 
     line {
-      font-family: \00003242;
+      font-family: \00003366;
     }
 }
 
@@ -20397,7 +20640,7 @@ body {
     }
 
     line {
-      font-family: \00003248;
+      font-family: \00003372;
     }
 }
 
@@ -20413,7 +20656,7 @@ body {
     }
 
     line {
-      font-family: \00003253;
+      font-family: \00003377;
     }
 }
 
